@@ -19,7 +19,7 @@ data "archive_file" "got_layer" {
 
 resource "aws_lambda_layer_version" "got" {
   layer_name          = "got-layer"
-  description         = "got: ^11.8.2"
+  description         = "got:^12.0.1"
   filename            = data.archive_file.got_layer.output_path
   source_code_hash    = data.archive_file.got_layer.output_base64sha256
   compatible_runtimes = ["nodejs14.x"]
