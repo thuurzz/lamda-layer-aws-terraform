@@ -5,7 +5,7 @@ resource "null_resource" "install_layer_deps" {
 
   provisioner "local-exec" {
     working_dir = "${local.layers_path}/got/nodejs"
-    command     = "npm install --production"
+    command     = "npm install"
   }
 }
 
