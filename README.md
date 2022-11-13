@@ -9,4 +9,5 @@ Código para criação de lambda usando layers, terraform e nodejs
   - [x] Layers
   - [x] IAM
   - [x] API Gateway
+  - [x] CloudWatch
 - [x] Expor aplicação por meio do API Gateway entregando end point para chamar serviço
