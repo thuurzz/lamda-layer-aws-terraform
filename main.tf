@@ -1,5 +1,5 @@
 terraform {
-  required_version = "0.15.4"
+  required_version = ">=0.15.4"
 }
 
 provider "aws" {
@@ -7,7 +7,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project   = "Lambda Layers with Terraform"
+      Project   = "Lambda + API Gateway"
       CreatedAt = formatdate("YYYY-MM-DD", timestamp())
       ManagedBy = "Terraform"
       Owner     = "Arthur Vinicius"

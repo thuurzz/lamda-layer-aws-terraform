@@ -19,3 +19,7 @@ output "lambdas" {
     last_modified = aws_lambda_function.cat_api.last_modified
   }]
 }
+
+output "api_url" {
+  value = aws_apigatewayv2_stage.this.invoke_url
+}

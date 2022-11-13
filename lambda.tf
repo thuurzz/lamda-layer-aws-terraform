@@ -20,3 +20,10 @@ resource "aws_lambda_function" "cat_api" {
 
   layers = [aws_lambda_layer_version.got.arn]
 }
+
+resource "aws_lambda_permission" "api" {
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.cat_api.arn
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "arn:aws:execute-api:${var.aws_region}:${var.aws_account_id}:*/*"
+}
